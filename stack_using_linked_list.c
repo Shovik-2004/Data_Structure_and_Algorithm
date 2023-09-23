@@ -23,41 +23,29 @@ void main ()
         scanf("%d",&choice);  
         switch(choice)  
         {  
-            case 1:  
-            {   
+            case 1:    
                 push();  
                 break;  
-            }  
             case 2:  
-            {  
                 pop();  
                 break;  
-            }  
             case 3:  
-            {  
                 display();  
-                break;  
-            }  
+                break;
             case 4:   
-            {  
                 printf("Exiting....");  
-                break;   
-            }  
+                break; 
             default:  
-            {  
-                printf("Please Enter valid choice ");  
-            }   
-    };  
-}  
+                printf("Please Enter valid choice "); 
+        };  
+  }  
 }  
 void push ()  
 {  
     int val;  
     struct node *ptr = (struct node*)malloc(sizeof(struct node));   
     if(ptr == NULL)  
-    {  
-        printf("not able to push the element");   
-    }  
+        printf("not able to push the element");
     else   
     {  
         printf("Enter the value\t");  
@@ -85,9 +73,7 @@ void pop()
     int item;  
     struct node *ptr;  
     if (head == NULL)  
-    {  
         printf("Underflow");  
-    }  
     else  
     {  
         item = head->val;  
@@ -104,9 +90,7 @@ void display()
     struct node *ptr;  
     ptr=head;  
     if(ptr == NULL)  
-    {  
         printf("Stack is empty\n");  
-    }  
     else  
     {  
         printf("Printing Stack elements \n");  
