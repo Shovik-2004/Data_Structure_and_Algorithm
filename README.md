@@ -1,2 +1,2 @@
 # Data_Structure_and_Algorithm
-This repo has codes related Data Structures
+This repo has codes related to Data Structures
