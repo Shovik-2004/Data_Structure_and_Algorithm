@@ -13,7 +13,6 @@ struct node* new_node(int x) {
   temp->data = x;
   temp->left_child = NULL;
   temp->right_child = NULL;
-
   return temp;
 }
 
@@ -82,6 +81,22 @@ void inorder(struct node *root) {
   }
 }
 
+void postfix(struct node *root) {
+  if (root != NULL) {
+    postfix(root->left_child);
+    postfix(root->right_child);
+    printf(" %d ", root->data);
+  }
+}
+
+void prefix(struct node *root) {
+  if (root != NULL) {
+    printf(" %d ", root->data);
+    prefix(root->left_child);
+    prefix(root->right_child);
+  }
+}
+
 int main() {
   struct node *root = NULL;
   int choice, value;
@@ -90,7 +105,9 @@ int main() {
     printf("1. Insert a value\n");
     printf("2. Delete a value\n");
     printf("3. Inorder Traversal\n");
-    printf("4. Exit\n");
+    printf("4. Postfix Traversal\n");
+    printf("5. Prefix Traversal\n");
+    printf("6. Exit\n");
     printf("Enter your choice: ");
     scanf("%d", &choice);
 
@@ -114,6 +131,18 @@ int main() {
         break;
 
       case 4:
+        printf("Postfix Traversal of the BST:\n");
+        postfix(root);
+        printf("\n");
+        break;
+
+      case 5:
+        printf("Prefix Traversal of the BST:\n");
+        prefix(root);
+        printf("\n");
+        break;
+
+      case 6:
         // Free allocated memory and exit
         exit(0);
 
