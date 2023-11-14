@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <limits.h>
 
-#define V 4 // Assuming a graph with 6 vertices
+#define V 4 // Assuming a graph with 4 vertices
 
 int minDistance(int dist[], int sptSet[]) {
     int min = INT_MAX, min_index;
